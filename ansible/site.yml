@@ -1,0 +1,12 @@
+- hosts: nodes
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Write page showing this node's hostname
+      copy:
+        dest: /var/www/html/index.html
+        content: "<h1>Hello from {{ inventory_hostname }} ({{ ansible_hostname }})</h1>"

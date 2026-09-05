@@ -1,0 +1,4 @@
+[nodes]
+%{ for ip in ips ~}
+${ip} ansible_user=root
+%{ endfor ~}
