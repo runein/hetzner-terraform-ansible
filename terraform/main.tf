@@ -1,6 +1,6 @@
 resource "hcloud_ssh_key" "lab" {
   name       = "terraform-lab"
-  public_key = file(pathexpand("~/.ssh/hetzner_lab.pub"))
+  public_key = var.ssh_public_key
 }
 resource "hcloud_server" "node" {
   count       = 3

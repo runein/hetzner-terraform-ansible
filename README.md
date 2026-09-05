@@ -24,11 +24,12 @@ terraform destroy
 
 ## Run it yourself
 
-Needs a Hetzner Cloud API token (Read & Write) and an SSH key at `~/.ssh/hetzner_lab`.
+Needs a Hetzner Cloud API token (Read & Write) and an SSH key pair. Both are passed in as variables, nothing is read from the author's machine.
 
 ```
 cd terraform
-export TF_VAR_hcloud_token=...   # never commit this
+export TF_VAR_hcloud_token=...                          # never commit this
+export TF_VAR_ssh_public_key="$(cat ~/.ssh/hetzner_lab.pub)"
 terraform init
 terraform apply
 
