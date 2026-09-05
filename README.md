@@ -1,5 +1,7 @@
 # Hetzner lab: Terraform + Ansible
 
+[![terraform](https://github.com/runein/hetzner-terraform-ansible/actions/workflows/terraform.yml/badge.svg)](https://github.com/runein/hetzner-terraform-ansible/actions)
+
 Builds 3 Ubuntu servers on Hetzner Cloud with Terraform, configures them with Ansible, tears them down. Total cost per run: about 2 cents.
 
 ## The problem this solves
